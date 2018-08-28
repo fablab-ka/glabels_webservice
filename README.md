@@ -1,10 +1,12 @@
 ### glabels_webservice
 Service to print simple labels via webfrontend
 # Installation
-- make sure you have python3 and pip installed
-- ```pip install -r requirements.txt```
+- make sure you have python3 installed
 - make sure you have a label printer (via cups) installed. You can list your printers with ```lpstat -d -p```
-- test the app with ```python3 app.py --port 8085 --printer YOURPRINTER``` and go to 0.0.0.0:8085
+- enter a desired port and printername in run.sh
+- ```sudo ./install.sh```
+- visit ```0.0.0.0:9123``` (replace the port if you changed the default in run.sh)
+- if there are problems, check ```sudo journalctl -u glabels-web```
 
 # Stuff to do
 - add installation script for system.d service
