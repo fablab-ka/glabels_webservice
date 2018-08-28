@@ -14,3 +14,20 @@ make
 sudo make install
 sudo ldconfig /usr/local/lib
 glabels-3-batch --help
+
+sudo echo "[Unit]
+Description=Simple Label Printer
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory="$PWD"
+ExecStart= "$PWD"/run.sh
+
+[Install]
+WantedBy=multi-user.target
+" > /etc/systemd/system/glabels-web.service
+
+sudo systemctl enable glabels-web.service
+sudo systemctl start glabels-web.service
