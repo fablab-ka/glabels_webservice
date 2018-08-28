@@ -20,6 +20,7 @@ def main_menu():
 def print_label():
     form = request.forms.getunicode
     copies = form('quantity')
+    copies = min(5, int(copies))
     text = form('text')
     #os.system()
     text = "\\n".join(text.splitlines())
