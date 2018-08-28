@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Glabels-document version="4.0">
+  <Template brand="label" part="1" width="283.465pt" size="" description="100x50mm wiederlösbares Etikett" height="141.732pt">
+    <Label-rectangle id="0" x_waste="0pt" width="283.465pt" round="0pt" height="141.732pt" y_waste="0pt">
+      <Markup-margin size="5.66929pt"/>
+      <Layout dx="283.465pt" y0="0pt" dy="141.732pt" nx="1" x0="0pt" ny="1"/>
+    </Label-rectangle>
+  </Template>
+  <Objects id="0" rotate="false">
+    <Object-text align="hcenter" font_italic="false" font_family="Sans" color="0xff" font_weight="normal" h="130pt" font_size="40" font_underline="false" a0="1" a1="0" a2="0" a3="1" line_spacing="1" a4="0" a5="0" w="272pt" x="5pt" y="5pt" auto_shrink="true" wrap="word" valign="vcenter">
+      <p>${1}</p>
+    </Object-text>
+  </Objects>
+  <Merge type="Text/Semicolon" src="/home/pcaroli/Projekte/glabels-web/text.csv"/>
+  <Data/>
+</Glabels-document>
