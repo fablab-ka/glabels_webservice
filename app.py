@@ -29,6 +29,8 @@ def print_label():
     os.system("glabels-3-batch -i text.csv -c " + str(int(copies)) + " 100x50.glabels")
     os.system("lp -d " + args.printer + " output.pdf")
 
+    return template('warning.tpl')
+
 parser = ArgumentParser()
 parser.add_argument("--port", dest="port",
                     help="port for the webfrontend")

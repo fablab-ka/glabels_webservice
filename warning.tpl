@@ -1,14 +1,15 @@
 <html>
 <head>
-    <title>LDAP Benutzer Panel</title>
+    <title>Simple Label Printer</title>
 </head>
 <body>
 
-<h2>{{text}}</h2>
+<h2>Labels are getting printed</h2>
+This can take a few seconds.
 <br><br>
 
 <form action="/">
-    <button type="submit">Zurück</button>
+    <button type="submit">Return</button>
 </form>
 </body>
 

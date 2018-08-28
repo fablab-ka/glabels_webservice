@@ -26,7 +26,7 @@
     <input type="number" name="quantity" value="1" min="1" max="50" step="1" required>
     <h4>Text to print</h4>
     <textarea name="text" form="print_form" placeholder="text" required></textarea>
-
+    <br><br>
     <input type="submit" value="print">
 </form>
 
