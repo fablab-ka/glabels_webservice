@@ -46,7 +46,7 @@ def print_label():
     text = form('text')
     text = "\n".join(text.splitlines())
     output_pdf(text)
-    os.system("lp -d " + args.printer + " output.pdf")
+    os.system("lp -d " + args.printer + " print.pdf")
     return template('warning.tpl')
 
 
