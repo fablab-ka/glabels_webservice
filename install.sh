@@ -1,20 +1,15 @@
 #!/usr/bin/env bash
 
-apt-get update
-apt-get install -y python3-bottle
-apt-get purge glabels
-apt-get build-dep glabels
-apt-get install -y checkinstall unp build-essential git
-apt-get install -y libgtk2.0-dev libgnomeui-dev libxml2-dev libglade2-dev libebook1.2-dev gtk-doc-tools libyelp-dev yelp-tools librsvg2-dev
-cd
-rm -rf glabels
-git clone https://github.com/GNOME/glabels.git
-cd glabels/
-./autogen.sh
-make
-make install
-ldconfig /usr/local/lib
-glabels-3-batch --help
+python3 -m pip install --user --upgrade pip
+python3 -m pip install --user virtualenv
+
+python3 -m virtualenv env
+source env/bin/activate
+
+pip install -r requirements.txt
+
+deactivate
+
 
 echo "[Unit]
 Description=Simple Label Printer
@@ -30,5 +25,6 @@ ExecStart= "$PWD"/run.sh
 WantedBy=multi-user.target
 " > /etc/systemd/system/glabels-web.service
 
+systemctl daemon-reload
 systemctl enable glabels-web.service
 systemctl start glabels-web.service
